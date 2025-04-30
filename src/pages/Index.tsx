@@ -13,7 +13,7 @@ import WhatsAppButton from '../components/WhatsAppButton';
 
 const Index = () => {
   useEffect(() => {
-    // Setup scroll reveal animation
+    // Enhanced scroll reveal animation with more fluid transitions
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -22,7 +22,10 @@ const Index = () => {
           }
         });
       },
-      { threshold: 0.1 }
+      { 
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+      }
     );
     
     const revealElements = document.querySelectorAll('.reveal');
@@ -41,7 +44,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-surface">
       <Header />
       <HeroSection />
       <AboutSection />

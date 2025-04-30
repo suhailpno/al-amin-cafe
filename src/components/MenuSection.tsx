@@ -5,7 +5,6 @@ interface MenuItem {
   id: number;
   name: string;
   description: string;
-  price: string;
   image: string;
   category: string;
 }
@@ -15,7 +14,6 @@ const menuItems: MenuItem[] = [
     id: 1,
     name: "Chicken Biryani",
     description: "Fragrant basmati rice cooked with tender chicken pieces and aromatic spices",
-    price: "$12.90",
     image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
     category: "rice"
   },
@@ -23,7 +21,6 @@ const menuItems: MenuItem[] = [
     id: 2,
     name: "Lamb Curry",
     description: "Tender pieces of lamb simmered in a rich, spiced curry sauce",
-    price: "$15.90",
     image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
     category: "curry"
   },
@@ -31,7 +28,6 @@ const menuItems: MenuItem[] = [
     id: 3,
     name: "Garlic Naan",
     description: "Freshly baked flatbread topped with garlic and butter",
-    price: "$3.50",
     image: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
     category: "bread"
   },
@@ -39,7 +35,6 @@ const menuItems: MenuItem[] = [
     id: 4,
     name: "Vegetable Samosa",
     description: "Crispy pastry filled with spiced potatoes and peas",
-    price: "$5.90",
     image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
     category: "appetizer"
   },
@@ -47,7 +42,6 @@ const menuItems: MenuItem[] = [
     id: 5,
     name: "Butter Chicken",
     description: "Grilled chicken in a rich, creamy tomato sauce",
-    price: "$14.90",
     image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
     category: "curry"
   },
@@ -55,7 +49,6 @@ const menuItems: MenuItem[] = [
     id: 6,
     name: "Vegetable Biryani",
     description: "Fragrant rice cooked with seasonal vegetables and spices",
-    price: "$10.90",
     image: "https://images.unsplash.com/photo-1593179241807-10580fb770e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
     category: "rice"
   },
@@ -63,7 +56,6 @@ const menuItems: MenuItem[] = [
     id: 7,
     name: "Tandoori Chicken",
     description: "Chicken marinated in yogurt and spices, cooked in a tandoor",
-    price: "$13.90",
     image: "https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
     category: "grill"
   },
@@ -71,13 +63,68 @@ const menuItems: MenuItem[] = [
     id: 8,
     name: "Mango Lassi",
     description: "Refreshing yogurt drink with mango and cardamom",
-    price: "$4.90",
     image: "https://images.unsplash.com/photo-1527661591475-527312dd65f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
     category: "drink"
   },
+  {
+    id: 9,
+    name: "Palak Paneer",
+    description: "Cottage cheese cubes in a creamy spinach sauce",
+    image: "https://images.unsplash.com/photo-1618360925897-365e298a6e65?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    category: "curry"
+  },
+  {
+    id: 10,
+    name: "Masala Dosa",
+    description: "Crispy rice crepe filled with spiced potato filling",
+    image: "https://images.unsplash.com/photo-1589352753375-e42d3dddf3e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    category: "breakfast"
+  },
+  {
+    id: 11,
+    name: "Gulab Jamun",
+    description: "Sweet milk solids balls soaked in rose flavored syrup",
+    image: "https://images.unsplash.com/photo-1589197331516-4d84b75b7af3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    category: "dessert"
+  },
+  {
+    id: 12,
+    name: "Chicken Tikka",
+    description: "Boneless chicken pieces marinated and grilled to perfection",
+    image: "https://images.unsplash.com/photo-1606943932434-2f21e1c54ef2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    category: "grill"
+  },
+  {
+    id: 13,
+    name: "Prawn Curry",
+    description: "Succulent prawns in a flavorful coconut curry sauce",
+    image: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    category: "curry"
+  },
+  {
+    id: 14,
+    name: "Vegetable Korma",
+    description: "Mixed vegetables in a rich, creamy cashew and yogurt sauce",
+    image: "https://images.unsplash.com/photo-1631292784640-2b24be979735?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    category: "curry"
+  },
+  {
+    id: 15,
+    name: "Jeera Rice",
+    description: "Basmati rice flavored with cumin seeds",
+    image: "https://images.unsplash.com/photo-1596450514735-111cca0a1151?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    category: "rice"
+  },
+  {
+    id: 16,
+    name: "Raita",
+    description: "Yogurt mixed with cucumber and mild spices",
+    image: "https://images.unsplash.com/photo-1589516987731-a382cabde0f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    category: "side"
+  }
 ];
 
-const categories = ["all", "rice", "curry", "bread", "appetizer", "grill", "drink"];
+const categories = ["all", "rice", "curry", "bread", "appetizer", "grill", "drink", "breakfast", "dessert", "side"];
 
 const MenuSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -114,9 +161,12 @@ const MenuSection = () => {
   }, []);
 
   return (
-    <section id="menu" className="py-20 px-4 md:px-8 lg:px-0 bg-gray-50" ref={sectionRef}>
+    <section id="menu" className="py-20 px-4 md:px-8 lg:px-0 bg-gradient-to-br from-[#FEF7CD] to-white" ref={sectionRef}>
       <div className="container mx-auto">
-        <h2 className="section-heading text-center mb-12 reveal">Menu Highlights</h2>
+        <h2 className="section-heading text-center mb-12 reveal">
+          Menu Highlights
+          <span className="absolute -bottom-2 left-0 w-2/3 h-1 bg-accent"></span>
+        </h2>
         
         <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-10 reveal">
           {categories.map((category) => (
@@ -125,9 +175,9 @@ const MenuSection = () => {
               onClick={() => filterItems(category)}
               className={`px-4 py-2 rounded-full capitalize transition-all ${
                 activeCategory === category
-                  ? 'bg-primary text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-100'
-              } shadow-sm`}
+                  ? 'bg-primary text-white shadow-md'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 shadow-sm'
+              }`}
             >
               {category}
             </button>
@@ -146,20 +196,17 @@ const MenuSection = () => {
                 />
               </div>
               <div className="p-4">
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="font-playfair font-bold text-lg">{item.name}</h3>
-                  <span className="font-medium text-primary">{item.price}</span>
-                </div>
+                <h3 className="font-playfair font-bold text-lg mb-2">{item.name}</h3>
                 <p className="text-gray-600 text-sm">{item.description}</p>
               </div>
             </div>
           ))}
         </div>
         
-        <div className="text-center mt-10">
+        <div className="text-center mt-12">
           <a
             href="#order"
-            className="btn-secondary inline-block"
+            className="btn-primary inline-block"
           >
             View Full Menu
           </a>

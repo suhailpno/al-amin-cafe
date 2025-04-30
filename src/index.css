@@ -35,7 +35,7 @@
 .reveal {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .reveal.active {
@@ -65,12 +65,12 @@
 
 .btn-primary {
   @apply bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded shadow-custom 
-  transition-all duration-300 inline-flex items-center justify-center;
+  transition-all duration-300 inline-flex items-center justify-center hover:shadow-lg hover:scale-105;
 }
 
 .btn-secondary {
   @apply bg-secondary hover:bg-secondary/90 text-white font-medium px-6 py-3 rounded shadow-custom 
-  transition-all duration-300 inline-flex items-center justify-center;
+  transition-all duration-300 inline-flex items-center justify-center hover:shadow-lg hover:scale-105;
 }
 
 .btn-outline {
@@ -79,7 +79,7 @@
 }
 
 .card-hover {
-  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  @apply transition-all duration-300 hover:shadow-custom-lg hover:-translate-y-1;
 }
 
 /* For masonry gallery */
@@ -88,4 +88,18 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-auto-rows: 10px;
   grid-gap: 16px;
+}
+
+/* Glass effect for cards */
+.glass-card {
+  @apply bg-white/90 backdrop-blur-sm;
+}
+
+/* Gradient backgrounds */
+.bg-gradient-primary {
+  @apply bg-gradient-to-br from-primary to-primary/80;
+}
+
+.bg-gradient-light {
+  @apply bg-gradient-to-br from-white to-softYellow/30;
 }

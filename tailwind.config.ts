@@ -30,6 +30,10 @@ export default {
         accent: "#FFC107",
         muted: "#A3A299",
         surface: "#FAFAF8",
+        softGreen: "#F2FCE2",
+        softYellow: "#FEF7CD",
+        softOrange: "#FEC6A1",
+        softPurple: "#E5DEFF",
       },
       fontFamily: {
         playfair: ['"Playfair Display"', 'serif'],
@@ -40,6 +44,7 @@ export default {
       },
       boxShadow: {
         custom: '0 4px 6px rgba(0,0,0,0.1)',
+        'custom-lg': '0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05)',
       },
       keyframes: {
         "accordion-down": {
@@ -57,13 +62,18 @@ export default {
         fadeIn: {
           '0%': { opacity: '0', transform: 'translateY(10px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' }
+        },
+        scaleUp: {
+          '0%': { transform: 'scale(0.95)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' }
         }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "float": "float 6s ease-in-out infinite",
-        "fade-in": "fadeIn 0.6s ease-out forwards"
+        "fade-in": "fadeIn 0.6s ease-out forwards",
+        "scale-up": "scaleUp 0.4s ease-out forwards"
       },
     },
   },

@@ -1,5 +1,6 @@
 
 import { useState, useEffect, useRef } from 'react';
+import { ShoppingBag, Utensils } from 'lucide-react';
 
 const OrderSection = () => {
   const [isHoverFoodpanda, setIsHoverFoodpanda] = useState(false);
@@ -34,14 +35,14 @@ const OrderSection = () => {
   };
 
   return (
-    <section id="order" className="py-20 px-4 md:px-8 lg:px-0 bg-primary text-white" ref={sectionRef}>
+    <section id="order" className="py-20 px-4 md:px-8 lg:px-0 bg-gradient-to-br from-primary to-primary/90 text-white" ref={sectionRef}>
       <div className="container mx-auto">
         <h2 className="section-heading text-white text-center mb-12 reveal">
           Order Online
           <span className="absolute -bottom-2 left-0 w-2/3 h-1 bg-accent"></span>
         </h2>
         
-        <p className="text-center max-w-2xl mx-auto mb-12 text-white/80 reveal">
+        <p className="text-center max-w-2xl mx-auto mb-12 text-white/90 reveal">
           Enjoy our delicious food from the comfort of your home. 
           Order now through our delivery partners for a quick and convenient experience.
         </p>
@@ -64,12 +65,12 @@ const OrderSection = () => {
                 bg-white rounded-lg p-8 shadow-lg transition-all duration-300
                 ${isHoverFoodpanda ? 'scale-105' : 'scale-100'}
               `}>
-                <img 
-                  src="https://logos-world.net/wp-content/uploads/2021/08/Foodpanda-Logo.png" 
-                  alt="Foodpanda" 
-                  className="h-16 w-auto mx-auto"
-                  loading="lazy"
-                />
+                <div className="flex items-center justify-center gap-3">
+                  <div className="bg-[#ff2b82] p-3 rounded-lg">
+                    <ShoppingBag className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-[#ff2b82] font-bold text-xl">foodpanda</h3>
+                </div>
                 <p className="text-primary font-medium text-center mt-4">Order via Foodpanda</p>
               </div>
             </a>
@@ -92,12 +93,12 @@ const OrderSection = () => {
                 bg-white rounded-lg p-8 shadow-lg transition-all duration-300
                 ${isHoverGrabfood ? 'scale-105' : 'scale-100'}
               `}>
-                <img 
-                  src="https://logos-download.com/wp-content/uploads/2016/12/GrabFood_logo_logotype.png" 
-                  alt="GrabFood" 
-                  className="h-16 w-auto mx-auto"
-                  loading="lazy"
-                />
+                <div className="flex items-center justify-center gap-3">
+                  <div className="bg-[#00b14f] p-3 rounded-lg">
+                    <Utensils className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-[#00b14f] font-bold text-xl">GrabFood</h3>
+                </div>
                 <p className="text-primary font-medium text-center mt-4">Order via GrabFood</p>
               </div>
             </a>
