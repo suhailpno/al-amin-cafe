@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,37 +13,79 @@
     --card-foreground: 20 14.3% 4.1%;
     --popover: 0 0% 100%;
     --popover-foreground: 20 14.3% 4.1%;
-    --primary: 24 9.8% 10%;
-    --primary-foreground: 60 9.1% 97.8%;
-    --secondary: 60 4.8% 95.9%;
-    --secondary-foreground: 24 9.8% 10%;
-    --muted: 60 4.8% 95.9%;
-    --muted-foreground: 25 5.3% 44.7%;
-    --accent: 60 4.8% 95.9%;
-    --accent-foreground: 24 9.8% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 60 9.1% 97.8%;
     --border: 20 5.9% 90%;
     --input: 20 5.9% 90%;
     --ring: 20 14.3% 4.1%;
     --radius: 0.5rem;
   }
-}
 
-@layer base {
-  * {
-    @apply border-border;
+  html {
+    scroll-behavior: smooth;
   }
+
   body {
-    @apply bg-surface text-primary antialiased;
+    @apply font-sans text-foreground bg-white antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
   }
 }
 
-.glass {
-  @apply bg-white bg-opacity-10 backdrop-blur-lg border-2 border-white border-opacity-20;
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.dot-pattern {
-  background-image: radial-gradient(circle at 1px 1px, #828179 2px, transparent 0);
-  background-size: 24px 24px;
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-item-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.menu-item-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.section-heading {
+  @apply font-playfair text-3xl md:text-4xl font-bold relative inline-block;
+}
+
+.section-heading::after {
+  content: '';
+  @apply absolute -bottom-2 left-0 w-2/3 h-1 bg-accent;
+}
+
+.btn-primary {
+  @apply bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded shadow-custom 
+  transition-all duration-300 inline-flex items-center justify-center;
+}
+
+.btn-secondary {
+  @apply bg-secondary hover:bg-secondary/90 text-white font-medium px-6 py-3 rounded shadow-custom 
+  transition-all duration-300 inline-flex items-center justify-center;
+}
+
+.btn-outline {
+  @apply border-2 border-primary text-primary hover:bg-primary hover:text-white font-medium 
+  px-6 py-3 rounded shadow-custom transition-all duration-300 inline-flex items-center justify-center;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+/* For masonry gallery */
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 10px;
+  grid-gap: 16px;
 }

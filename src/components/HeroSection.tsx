@@ -1,0 +1,89 @@
+
+import { useState, useEffect } from 'react';
+
+const heroImages = [
+  {
+    url: "https://images.unsplash.com/photo-1511690078903-71dc5a49f5e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+    alt: "Traditional spicy curry dish"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+    alt: "Aromatic rice with herbs and spices"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1596451190630-186aff535bf2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+    alt: "Grilled meat skewers with vegetables"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+    alt: "Freshly baked naan bread"
+  },
+];
+
+const HeroSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Image Carousel */}
+      <div className="absolute inset-0">
+        {heroImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              currentSlide === index ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <div className="absolute inset-0 bg-black/50" />
+            <img
+              src={image.url}
+              alt={image.alt}
+              className="w-full h-full object-cover"
+              loading={index === 0 ? "eager" : "lazy"}
+            />
+          </div>
+        ))}
+      </div>
+      
+      {/* Content */}
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-playfair text-white mb-4 drop-shadow-lg">
+          Al-Amin Food Paradise
+        </h1>
+        <p className="text-xl md:text-2xl text-white mb-8 drop-shadow-lg">
+          A Taste of Tradition in Every Bite
+        </p>
+        <a 
+          href="#order"
+          className="btn-primary text-lg px-8 py-4"
+        >
+          Order Now
+        </a>
+      </div>
+      
+      {/* Carousel Indicators */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all ${
+              currentSlide === index ? 'bg-accent w-6' : 'bg-white/50'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;

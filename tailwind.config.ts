@@ -25,12 +25,21 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: "#141413",
-        secondary: "#828179",
-        accent: "#C4C3BB",
+        primary: "#C17817",
+        secondary: "#234F1E",
+        accent: "#FFC107",
         muted: "#A3A299",
-        highlight: "#F2FF44",
         surface: "#FAFAF8",
+      },
+      fontFamily: {
+        playfair: ['"Playfair Display"', 'serif'],
+        sans: ['"Open Sans"', 'sans-serif'],
+      },
+      borderRadius: {
+        DEFAULT: '8px',
+      },
+      boxShadow: {
+        custom: '0 4px 6px rgba(0,0,0,0.1)',
       },
       keyframes: {
         "accordion-down": {
@@ -44,12 +53,17 @@ export default {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' }
         }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "float": "float 6s ease-in-out infinite",
+        "fade-in": "fadeIn 0.6s ease-out forwards"
       },
     },
   },

@@ -1,20 +1,79 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>modern-simplicity</title>
-  <meta name="description" content="GPT Engineer Generated Project" />
-  <meta name="author" content="GPT Engineer" />
-  <meta property="og:image" content="/og-image.svg" />
-</head>
-
-<body>
-  <div id="root"></div>
+  <title>Al-Amin Food Paradise | A Taste of Tradition in Every Bite</title>
+  <meta name="description" content="Al-Amin Food Paradise offers authentic traditional cuisine with fresh ingredients in Singapore. Order online or visit us for a memorable dining experience." />
+  <meta name="author" content="Al-Amin Food Paradise" />
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Al-Amin Food Paradise | A Taste of Tradition in Every Bite" />
+  <meta property="og:description" content="Experience authentic traditional cuisine with fresh ingredients. Order online or visit us for a memorable dining experience." />
+  <meta property="og:image" content="/og-image.jpg" />
+  <meta property="og:url" content="https://alaminparadise.com" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Al-Amin Food Paradise | A Taste of Tradition in Every Bite" />
+  <meta name="twitter:description" content="Experience authentic traditional cuisine with fresh ingredients. Order online or visit us for a memorable dining experience." />
+  <meta name="twitter:image" content="/og-image.jpg" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  
+  <!-- Schema.org markup for Google -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Restaurant",
+      "name": "Al-Amin Food Paradise",
+      "image": "/restaurant-image.jpg",
+      "url": "https://alaminparadise.com",
+      "telephone": "+6591655269",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Yishun Avenue 5, #01-23",
+        "addressLocality": "Singapore",
+        "postalCode": "768543",
+        "addressCountry": "SG"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "1.3616219",
+        "longitude": "103.8444481"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "11:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Friday", "Saturday"],
+          "opens": "11:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "10:00",
+          "closes": "22:00"
+        }
+      ],
+      "servesCuisine": ["Traditional", "Halal"],
+      "priceRange": "$$",
+      "menu": "https://alaminparadise.com/menu"
+    }
+  </script>
   <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   <script type="module" src="/src/main.tsx"></script>
+</head>
+<body>
+  <div id="root"></div>
 </body>
-
 </html>
