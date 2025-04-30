@@ -33,7 +33,7 @@ const LocationSection = () => {
           <div className="reveal h-full">
             <div className="aspect-auto h-full rounded-lg overflow-hidden shadow-custom">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7881961273446!2d103.7898279788258!3d1.3086810618240507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1a69f9d8c12f%3A0x9b7187f076f8937f!2sAl-Amin%20Food%20Paradise!5e0!3m2!1sen!2ssg!4v1714615001091!5m2!1sen!2ssg"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.71270615361!2d103.84444812066844!3d1.361621872774889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da17964c19416b%3A0xcf27f8056cac45cd!2sAl-Amin%20Restaurant!5e0!3m2!1sen!2sus!4v1714506476338!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: "350px" }}
@@ -66,7 +66,7 @@ const LocationSection = () => {
               
               <div className="mt-8">
                 <a 
-                  href="https://maps.google.com/?q=Al-Amin Food Paradise Singapore"
+                  href="https://maps.google.com/?q=Al-Amin Restaurant Singapore"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary inline-block"

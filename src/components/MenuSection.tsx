@@ -13,97 +13,97 @@ const menuItems: MenuItem[] = [
     id: 1,
     name: "Chicken Biryani",
     description: "Fragrant basmati rice cooked with tender chicken pieces and aromatic spices",
-    image: "https://www.foodiesfeed.com/wp-content/uploads/2023/06/indian-biryani-with-yogurt-sauce.jpg"
+    image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: 2,
     name: "Lamb Curry",
     description: "Tender pieces of lamb simmered in a rich, spiced curry sauce",
-    image: "https://www.foodiesfeed.com/wp-content/uploads/2023/04/indian-curry-with-prawns.jpg"
+    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: 3,
     name: "Garlic Naan",
     description: "Freshly baked flatbread topped with garlic and butter",
-    image: "https://www.foodiesfeed.com/wp-content/uploads/2019/04/mae-mu-naan.jpg"
+    image: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: 4,
     name: "Vegetable Samosa",
     description: "Crispy pastry filled with spiced potatoes and peas",
-    image: "https://www.foodiesfeed.com/wp-content/uploads/2021/01/fried-egg-with-guacamole-sandwiches.jpg"
+    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: 5,
     name: "Butter Chicken",
     description: "Grilled chicken in a rich, creamy tomato sauce",
-    image: "https://www.foodiesfeed.com/wp-content/uploads/2023/06/fresh-salad-with-grilled-halloumi-cheese.jpg"
+    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: 6,
     name: "Vegetable Biryani",
     description: "Fragrant rice cooked with seasonal vegetables and spices",
-    image: "https://www.foodiesfeed.com/wp-content/uploads/2015/03/indian-vegetarian-food-platter.jpg"
+    image: "https://images.unsplash.com/photo-1593179241807-10580fb770e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: 7,
     name: "Tandoori Chicken",
     description: "Chicken marinated in yogurt and spices, cooked in a tandoor",
-    image: "https://www.foodiesfeed.com/wp-content/uploads/2017/07/roasted-chicken-with-potatoes.jpg"
+    image: "https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: 8,
     name: "Mango Lassi",
     description: "Refreshing yogurt drink with mango and cardamom",
-    image: "https://www.foodiesfeed.com/wp-content/uploads/2019/01/dreamy-flatwhite-coffee-with-perfect-latte-art.jpg"
+    image: "https://images.unsplash.com/photo-1527661591475-527312dd65f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: 9,
     name: "Palak Paneer",
     description: "Cottage cheese cubes in a creamy spinach sauce",
-    image: "https://www.foodiesfeed.com/wp-content/uploads/2016/05/summer-juicy-beef-burger.jpg"
+    image: "https://images.unsplash.com/photo-1618360925897-365e298a6e65?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: 10,
     name: "Masala Dosa",
     description: "Crispy rice crepe filled with spiced potato filling",
-    image: "https://www.foodiesfeed.com/wp-content/uploads/2023/05/traditional-south-indian-dosa-with-chutney.jpg"
+    image: "https://images.unsplash.com/photo-1589352753375-e42d3dddf3e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: 11,
     name: "Gulab Jamun",
     description: "Sweet milk solids balls soaked in rose flavored syrup",
-    image: "https://www.foodiesfeed.com/wp-content/uploads/2020/05/indian-sweet-gulab-jamun.jpg"
+    image: "https://images.unsplash.com/photo-1589197331516-4d84b75b7af3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: 12,
     name: "Chicken Tikka",
     description: "Boneless chicken pieces marinated and grilled to perfection",
-    image: "https://www.foodiesfeed.com/wp-content/uploads/2019/08/indian-chicken-tikka-skewers.jpg"
+    image: "https://images.unsplash.com/photo-1606943932434-2f21e1c54ef2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: 13,
     name: "Prawn Curry",
     description: "Succulent prawns in a flavorful coconut curry sauce",
-    image: "https://www.foodiesfeed.com/wp-content/uploads/2021/01/spicy-thai-noodle-soup.jpg"
+    image: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: 14,
     name: "Vegetable Korma",
     description: "Mixed vegetables in a rich, creamy cashew and yogurt sauce",
-    image: "https://www.foodiesfeed.com/wp-content/uploads/2023/06/vegetarian-curry-with-tofu.jpg"
+    image: "https://images.unsplash.com/photo-1631292784640-2b24be979735?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: 15,
     name: "Jeera Rice",
     description: "Basmati rice flavored with cumin seeds",
-    image: "https://www.foodiesfeed.com/wp-content/uploads/2019/01/white-rice.jpg"
+    image: "https://images.unsplash.com/photo-1596450514735-111cca0a1151?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   },
   {
     id: 16,
     name: "Raita",
     description: "Yogurt mixed with cucumber and mild spices",
-    image: "https://www.foodiesfeed.com/wp-content/uploads/2019/01/bowl-with-yoghurt-and-granola.jpg"
+    image: "https://images.unsplash.com/photo-1589516987731-a382cabde0f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
   }
 ];
 
@@ -116,14 +116,6 @@ const MenuSection = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('active');
-            
-            // Add staggered animation for menu items
-            const menuItems = entry.target.querySelectorAll('.menu-item');
-            menuItems.forEach((item, index) => {
-              setTimeout(() => {
-                (item as HTMLElement).classList.add('active');
-              }, 100 * index);
-            });
           }
         });
       },
@@ -152,12 +144,8 @@ const MenuSection = () => {
         </p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {menuItems.map((item, index) => (
-            <div 
-              key={item.id} 
-              className="bg-white rounded-lg shadow-custom overflow-hidden card-hover menu-item opacity-0 transform translate-y-8 transition-all duration-500 ease-out"
-              style={{ transitionDelay: `${index * 50}ms` }}
-            >
+          {menuItems.map((item) => (
+            <div key={item.id} className="bg-white rounded-lg shadow-custom overflow-hidden card-hover reveal group">
               <div className="h-48 overflow-hidden">
                 <img
                   src={item.image}

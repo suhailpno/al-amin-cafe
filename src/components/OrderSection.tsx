@@ -35,15 +35,10 @@ const OrderSection = () => {
   return (
     <section id="order" className="py-20 px-4 md:px-8 lg:px-0 bg-gradient-to-br from-primary/95 to-primary/80 text-white relative overflow-hidden" ref={sectionRef}>
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
         <div className="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-white/30 blur-3xl"></div>
         <div className="absolute top-1/2 right-0 w-80 h-80 rounded-full bg-accent/30 blur-3xl"></div>
         <div className="absolute bottom-0 left-1/4 w-96 h-96 rounded-full bg-white/20 blur-3xl"></div>
-        
-        {/* Animated floating elements */}
-        <div className="absolute top-1/4 right-1/4 w-8 h-8 rounded-full bg-white/30 animate-float" style={{ animationDuration: '8s' }}></div>
-        <div className="absolute bottom-1/3 left-1/3 w-6 h-6 rounded-full bg-accent/30 animate-float" style={{ animationDuration: '10s', animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 right-1/2 w-10 h-10 rounded-full bg-white/20 animate-float" style={{ animationDuration: '12s', animationDelay: '2s' }}></div>
       </div>
       
       <div className="container mx-auto relative z-10">
@@ -52,7 +47,7 @@ const OrderSection = () => {
           <span className="absolute -bottom-2 left-0 w-2/3 h-1 bg-accent"></span>
         </h2>
         
-        <p className="text-center max-w-2xl mx-auto mb-16 text-white/90 text-lg reveal">
+        <p className="text-center max-w-2xl mx-auto mb-12 text-white/90 text-lg reveal">
           Enjoy our delicious food from the comfort of your home. 
           Order now through our delivery partners for a quick and convenient experience.
         </p>
@@ -76,22 +71,14 @@ const OrderSection = () => {
                 bg-white/90 backdrop-blur-sm rounded-lg p-8 shadow-2xl transition-all duration-500
                 ${isHoverFoodpanda ? 'scale-105 shadow-accent/20' : 'scale-100'}
               `}>
-                <div className="flex flex-col items-center justify-center gap-4">
-                  <div className="w-24 h-24 overflow-hidden rounded-full border-4 border-white">
-                    <img 
-                      src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Foodpanda_logo_since_2017.jpeg" 
-                      alt="Foodpanda logo" 
-                      className="w-full h-full object-cover"
-                    />
+                <div className="flex items-center justify-center gap-3">
+                  <div className="bg-[#ff2b82] p-3 rounded-lg">
+                    <ShoppingBag className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-[#ff2b82] font-bold text-2xl">FOODPANDA</h3>
                 </div>
                 <p className="text-primary font-medium text-center mt-4">Order via Foodpanda</p>
               </div>
-              
-              {/* Animated elements on hover */}
-              <div className={`absolute -bottom-2 -right-2 w-10 h-10 bg-[#ff2b82] rounded-full transition-opacity duration-300 ${isHoverFoodpanda ? 'opacity-100' : 'opacity-0'}`}></div>
-              <div className={`absolute -top-2 -left-2 w-6 h-6 bg-[#ff2b82] rounded-full transition-opacity duration-300 ${isHoverFoodpanda ? 'opacity-100' : 'opacity-0'}`}></div>
             </a>
           </div>
           
@@ -113,22 +100,14 @@ const OrderSection = () => {
                 bg-white/90 backdrop-blur-sm rounded-lg p-8 shadow-2xl transition-all duration-500
                 ${isHoverGrabfood ? 'scale-105 shadow-accent/20' : 'scale-100'}
               `}>
-                <div className="flex flex-col items-center justify-center gap-4">
-                  <div className="w-24 h-24 overflow-hidden rounded-full border-4 border-white">
-                    <img 
-                      src="https://i.pinimg.com/736x/6e/9b/95/6e9b95d516082899783cfd05d7629995.jpg" 
-                      alt="GrabFood logo" 
-                      className="w-full h-full object-cover"
-                    />
+                <div className="flex items-center justify-center gap-3">
+                  <div className="bg-[#00b14f] p-3 rounded-lg">
+                    <Utensils className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-[#00b14f] font-bold text-2xl">GRABFOOD</h3>
                 </div>
                 <p className="text-primary font-medium text-center mt-4">Order via GrabFood</p>
               </div>
-              
-              {/* Animated elements on hover */}
-              <div className={`absolute -bottom-2 -left-2 w-10 h-10 bg-[#00b14f] rounded-full transition-opacity duration-300 ${isHoverGrabfood ? 'opacity-100' : 'opacity-0'}`}></div>
-              <div className={`absolute -top-2 -right-2 w-6 h-6 bg-[#00b14f] rounded-full transition-opacity duration-300 ${isHoverGrabfood ? 'opacity-100' : 'opacity-0'}`}></div>
             </a>
           </div>
         </div>

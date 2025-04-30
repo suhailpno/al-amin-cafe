@@ -45,19 +45,7 @@ const Index = () => {
     staggerElements.forEach(el => {
       (el as HTMLElement).style.opacity = '0';
       (el as HTMLElement).style.transform = 'translateY(20px)';
-      (el as HTMLElement).style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    });
-    
-    // Initialize menu item animations
-    const menuItems = document.querySelectorAll('.menu-item');
-    menuItems.forEach(el => {
-      (el as HTMLElement).style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-    });
-    
-    // Initialize gallery item animations
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    galleryItems.forEach(el => {
-      (el as HTMLElement).style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+      (el as HTMLElement).style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     });
     
     return () => {
