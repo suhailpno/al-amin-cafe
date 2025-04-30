@@ -4,53 +4,53 @@ import { useState, useEffect, useRef } from 'react';
 const galleryImages = [
   {
     id: 1,
-    url: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-    alt: "Rich and aromatic lamb curry",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2023/06/indian-biryani-with-yogurt-sauce.jpg",
+    alt: "Flavorful biryani with yogurt sauce",
   },
   {
     id: 2,
-    url: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2019/04/mae-mu-naan.jpg",
     alt: "Freshly prepared naan bread with garlic",
   },
   {
     id: 3,
-    url: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-1.2.1&auto=format&fit=crop&w=896&q=80",
-    alt: "Colorful variety of spices used in our dishes",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2023/05/traditional-south-indian-dosa-with-chutney.jpg",
+    alt: "Traditional South Indian dosa with chutney",
   },
   {
     id: 4,
-    url: "https://images.unsplash.com/photo-1631292784649-4dff096d0c85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-    alt: "Chef preparing a traditional dish in the kitchen",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2023/04/indian-curry-with-prawns.jpg",
+    alt: "Rich and flavorful Indian curry with prawns",
   },
   {
     id: 5,
-    url: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-    alt: "Fresh salad with seasonal vegetables",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2020/05/indian-sweet-gulab-jamun.jpg",
+    alt: "Sweet gulab jamun dessert",
   },
   {
     id: 6,
-    url: "https://images.unsplash.com/photo-1568376794508-ae52c6ab3929?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-    alt: "Staff serving customers with a smile",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2023/06/vegetarian-curry-with-tofu.jpg",
+    alt: "Vegetarian curry with tofu",
   },
   {
     id: 7,
-    url: "https://images.unsplash.com/photo-1589309736404-a037e5ed3c6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-    alt: "Authentic biryani with tender meat and aromatic rice",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2019/08/indian-chicken-tikka-skewers.jpg",
+    alt: "Spicy chicken tikka skewers",
   },
   {
     id: 8,
-    url: "https://images.unsplash.com/photo-1626777553635-be342a887072?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-    alt: "Traditional tandoori chicken served with garnish",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2015/03/indian-vegetarian-food-platter.jpg",
+    alt: "Indian vegetarian food platter",
   },
   {
     id: 9,
-    url: "https://images.unsplash.com/photo-1606471191009-63994c53433b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-    alt: "Delicious masala dosa with chutney and sambar",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2019/01/white-rice.jpg",
+    alt: "Perfectly cooked basmati rice",
   },
   {
     id: 10,
-    url: "https://images.unsplash.com/photo-1567188040759-fb8a254b3128?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-    alt: "Variety of Indian street food on rustic wooden table",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2021/01/spicy-thai-noodle-soup.jpg",
+    alt: "Flavorful spicy soup with noodles",
   }
 ];
 
@@ -64,6 +64,14 @@ const GallerySection = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('active');
+            
+            // Staggered animation for gallery items
+            const galleryItems = entry.target.querySelectorAll('.gallery-item');
+            galleryItems.forEach((item, index) => {
+              setTimeout(() => {
+                (item as HTMLElement).classList.add('active');
+              }, 100 * index);
+            });
           }
         });
       },
@@ -111,10 +119,10 @@ const GallerySection = () => {
           {galleryImages.map((image, index) => (
             <div 
               key={image.id} 
-              className={`relative aspect-square cursor-pointer overflow-hidden rounded-lg reveal group ${
+              className={`relative aspect-square cursor-pointer overflow-hidden rounded-lg gallery-item opacity-0 transform translate-y-8 transition-all duration-500 ease-out group ${
                 index % 3 === 0 ? 'md:col-span-2 md:row-span-2' : ''
               }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
+              style={{ transitionDelay: `${index * 50}ms` }}
               onClick={() => openLightbox(image.id)}
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-end justify-start p-4">

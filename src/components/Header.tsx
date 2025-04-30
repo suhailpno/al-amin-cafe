@@ -39,26 +39,27 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
-          <a href="#" onClick={() => scrollToSection('hero')} className="flex items-center">
-            <span className={`font-playfair text-2xl sm:text-3xl font-bold ${isScrolled ? 'text-primary' : 'text-white'}`}>
-              Al-Amin
-            </span>
-            <span className={`font-playfair text-base sm:text-xl ml-2 ${isScrolled ? 'text-secondary' : 'text-white'}`}>
-              Food Paradise
-            </span>
+          <a href="#" onClick={() => scrollToSection('hero')} className="flex-shrink-0">
+            <h1 className={`font-playfair text-2xl sm:text-3xl font-bold ${isScrolled ? 'text-primary' : 'text-white'}`}>
+              <span className="relative inline-block overflow-hidden">
+                Al-Amin Food Paradise
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+              </span>
+            </h1>
           </a>
           
           {/* Desktop Navigation - Centered */}
-          <nav className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10">
+          <nav className="hidden md:flex items-center justify-center space-x-12 absolute left-1/2 transform -translate-x-1/2">
             {['about', 'menu', 'gallery', 'location'].map((item) => (
               <a
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className={`capitalize cursor-pointer font-medium transition-all duration-300 hover:scale-105 ${
+                className={`capitalize cursor-pointer font-medium transition-all duration-300 hover:scale-105 relative group ${
                   isScrolled ? 'text-gray-700 hover:text-primary' : 'text-white hover:text-accent'
                 }`}
               >
                 {item}
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
               </a>
             ))}
           </nav>
@@ -67,7 +68,7 @@ const Header = () => {
           <a 
             href="#order" 
             onClick={() => scrollToSection('order')}
-            className={`hidden md:inline-block btn-primary !py-2 !px-4`}
+            className={`hidden md:inline-block btn-primary !py-2 !px-6 font-medium rounded-full transition-all duration-300 hover:shadow-lg`}
           >
             Order Now
           </a>

@@ -11,8 +11,8 @@ const heroImages = [
     alt: "Aromatic rice with herbs and spices"
   },
   {
-    url: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
-    alt: "Freshly prepared naan bread with garlic"
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2023/04/indian-curry-with-prawns.jpg",
+    alt: "Delicious Indian curry with prawns and rice"
   },
   {
     url: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
@@ -42,7 +42,7 @@ const HeroSection = () => {
               currentSlide === index ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/40" />
             <img
               src={image.url}
               alt={image.alt}
@@ -55,15 +55,19 @@ const HeroSection = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-playfair text-white mb-6 drop-shadow-lg">
-          Al-Amin Food Paradise
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-playfair text-white mb-8 drop-shadow-lg tracking-wide relative inline-block">
+          <span className="relative animate-fade-in" style={{ animationDelay: '300ms' }}>
+            Al-Amin Food Paradise
+          </span>
+          <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-1/2 h-1 bg-accent animate-scale-up" style={{ animationDelay: '1000ms' }}></span>
         </h1>
-        <p className="text-xl md:text-2xl text-white mb-10 drop-shadow-lg">
+        <p className="text-xl md:text-2xl text-white mb-12 drop-shadow-lg animate-fade-in" style={{ animationDelay: '600ms' }}>
           A Taste of Tradition in Every Bite
         </p>
         <a 
           href="#order"
-          className="btn-primary text-lg px-10 py-4 rounded-full hover:scale-110"
+          className="btn-primary text-lg px-10 py-4 rounded-full hover:scale-110 animate-fade-in shadow-lg"
+          style={{ animationDelay: '900ms' }}
         >
           Order Now
         </a>
