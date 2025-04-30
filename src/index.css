@@ -64,35 +64,27 @@
 }
 
 .btn-primary {
-  @apply bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded shadow-custom 
+  @apply bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded-lg shadow-custom 
   transition-all duration-300 inline-flex items-center justify-center hover:shadow-lg hover:scale-105;
 }
 
 .btn-secondary {
-  @apply bg-secondary hover:bg-secondary/90 text-white font-medium px-6 py-3 rounded shadow-custom 
+  @apply bg-secondary hover:bg-secondary/90 text-white font-medium px-6 py-3 rounded-lg shadow-custom 
   transition-all duration-300 inline-flex items-center justify-center hover:shadow-lg hover:scale-105;
 }
 
 .btn-outline {
   @apply border-2 border-primary text-primary hover:bg-primary hover:text-white font-medium 
-  px-6 py-3 rounded shadow-custom transition-all duration-300 inline-flex items-center justify-center;
+  px-6 py-3 rounded-lg shadow-custom transition-all duration-300 inline-flex items-center justify-center;
 }
 
 .card-hover {
   @apply transition-all duration-300 hover:shadow-custom-lg hover:-translate-y-1;
 }
 
-/* For masonry gallery */
-.masonry-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: 10px;
-  grid-gap: 16px;
-}
-
 /* Glass effect for cards */
 .glass-card {
-  @apply bg-white/90 backdrop-blur-sm;
+  @apply bg-white/80 backdrop-blur-sm;
 }
 
 /* Gradient backgrounds */
@@ -103,3 +95,64 @@
 .bg-gradient-light {
   @apply bg-gradient-to-br from-white to-softYellow/30;
 }
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* More refined animations */
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 3s ease-in-out infinite;
+}
+
+/* Enhanced image zoom */
+.zoom-hover {
+  @apply overflow-hidden;
+}
+
+.zoom-hover img {
+  @apply transition-transform duration-700 ease-in-out;
+}
+
+.zoom-hover:hover img {
+  @apply scale-110;
+}
+
+/* Loader animation */
+@keyframes loader-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader {
+  @apply border-t-primary border-r-transparent border-b-transparent border-l-transparent border-4 rounded-full w-10 h-10;
+  animation: loader-spin 1s linear infinite;
+}
+
+/* Text glow effect for premium titles */
+.text-glow {
+  text-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+}
+
+/* Improved spacing for all sections */
+section {
+  @apply py-24;
+}
+
+@media (max-width: 768px) {
+  section {
+    @apply py-16;
+  }
+}
+

@@ -19,6 +19,15 @@ const Index = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('active');
+            
+            // Add staggered animation for child elements
+            const childElements = entry.target.querySelectorAll('.stagger');
+            childElements.forEach((el, index) => {
+              setTimeout(() => {
+                (el as HTMLElement).style.opacity = '1';
+                (el as HTMLElement).style.transform = 'translateY(0)';
+              }, 150 * index);
+            });
           }
         });
       },
@@ -31,20 +40,21 @@ const Index = () => {
     const revealElements = document.querySelectorAll('.reveal');
     revealElements.forEach(element => observer.observe(element));
     
+    // Initialize staggered elements
+    const staggerElements = document.querySelectorAll('.stagger');
+    staggerElements.forEach(el => {
+      (el as HTMLElement).style.opacity = '0';
+      (el as HTMLElement).style.transform = 'translateY(20px)';
+      (el as HTMLElement).style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+    
     return () => {
       revealElements.forEach(element => observer.unobserve(element));
     };
   }, []);
-  
-  // For a real implementation, you would set up analytics here
-  useEffect(() => {
-    // This would be Google Analytics 4 setup
-    console.log('Setting up analytics...');
-    // Example GA4 code would go here
-  }, []);
 
   return (
-    <div className="min-h-screen bg-surface">
+    <div className="min-h-screen bg-surface overflow-x-hidden">
       <Header />
       <HeroSection />
       <AboutSection />

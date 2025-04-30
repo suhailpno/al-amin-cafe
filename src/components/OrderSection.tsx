@@ -30,19 +30,24 @@ const OrderSection = () => {
   const trackOrderClick = (platform: string) => {
     // For real implementation, replace with actual analytics tracking
     console.log(`Order clicked: ${platform}`);
-    // If using Google Analytics, would do something like:
-    // gtag('event', 'click', { 'event_category': 'order', 'event_label': platform });
   };
 
   return (
-    <section id="order" className="py-20 px-4 md:px-8 lg:px-0 bg-gradient-to-br from-primary to-primary/90 text-white" ref={sectionRef}>
-      <div className="container mx-auto">
+    <section id="order" className="py-20 px-4 md:px-8 lg:px-0 bg-gradient-to-br from-primary/95 to-primary/80 text-white relative overflow-hidden" ref={sectionRef}>
+      {/* Background decorative elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
+        <div className="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-white/30 blur-3xl"></div>
+        <div className="absolute top-1/2 right-0 w-80 h-80 rounded-full bg-accent/30 blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 rounded-full bg-white/20 blur-3xl"></div>
+      </div>
+      
+      <div className="container mx-auto relative z-10">
         <h2 className="section-heading text-white text-center mb-12 reveal">
           Order Online
           <span className="absolute -bottom-2 left-0 w-2/3 h-1 bg-accent"></span>
         </h2>
         
-        <p className="text-center max-w-2xl mx-auto mb-12 text-white/90 reveal">
+        <p className="text-center max-w-2xl mx-auto mb-12 text-white/90 text-lg reveal">
           Enjoy our delicious food from the comfort of your home. 
           Order now through our delivery partners for a quick and convenient experience.
         </p>
@@ -50,7 +55,8 @@ const OrderSection = () => {
         <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
           {/* Foodpanda */}
           <div 
-            className="reveal"
+            className="reveal animate-float"
+            style={{ animationDelay: "0.2s" }}
             onMouseEnter={() => setIsHoverFoodpanda(true)}
             onMouseLeave={() => setIsHoverFoodpanda(false)}
           >
@@ -62,14 +68,14 @@ const OrderSection = () => {
               className="block relative"
             >
               <div className={`
-                bg-white rounded-lg p-8 shadow-lg transition-all duration-300
-                ${isHoverFoodpanda ? 'scale-105' : 'scale-100'}
+                bg-white/90 backdrop-blur-sm rounded-lg p-8 shadow-2xl transition-all duration-500
+                ${isHoverFoodpanda ? 'scale-105 shadow-accent/20' : 'scale-100'}
               `}>
                 <div className="flex items-center justify-center gap-3">
                   <div className="bg-[#ff2b82] p-3 rounded-lg">
                     <ShoppingBag className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-[#ff2b82] font-bold text-xl">foodpanda</h3>
+                  <h3 className="text-[#ff2b82] font-bold text-2xl">FOODPANDA</h3>
                 </div>
                 <p className="text-primary font-medium text-center mt-4">Order via Foodpanda</p>
               </div>
@@ -78,7 +84,8 @@ const OrderSection = () => {
           
           {/* GrabFood */}
           <div 
-            className="reveal"
+            className="reveal animate-float"
+            style={{ animationDelay: "0.5s" }}
             onMouseEnter={() => setIsHoverGrabfood(true)}
             onMouseLeave={() => setIsHoverGrabfood(false)}
           >
@@ -90,14 +97,14 @@ const OrderSection = () => {
               className="block relative"
             >
               <div className={`
-                bg-white rounded-lg p-8 shadow-lg transition-all duration-300
-                ${isHoverGrabfood ? 'scale-105' : 'scale-100'}
+                bg-white/90 backdrop-blur-sm rounded-lg p-8 shadow-2xl transition-all duration-500
+                ${isHoverGrabfood ? 'scale-105 shadow-accent/20' : 'scale-100'}
               `}>
                 <div className="flex items-center justify-center gap-3">
                   <div className="bg-[#00b14f] p-3 rounded-lg">
                     <Utensils className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-[#00b14f] font-bold text-xl">GrabFood</h3>
+                  <h3 className="text-[#00b14f] font-bold text-2xl">GRABFOOD</h3>
                 </div>
                 <p className="text-primary font-medium text-center mt-4">Order via GrabFood</p>
               </div>

@@ -33,42 +33,44 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-custom py-2' : 'bg-transparent py-4'
+      className={`fixed w-full z-50 transition-all duration-500 ${
+        isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-custom py-2' : 'bg-transparent py-6'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <a href="#" onClick={() => scrollToSection('hero')} className="flex items-center">
-            <span className={`font-playfair text-2xl font-bold ${isScrolled ? 'text-primary' : 'text-white'}`}>
+            <span className={`font-playfair text-2xl sm:text-3xl font-bold ${isScrolled ? 'text-primary' : 'text-white'}`}>
               Al-Amin
             </span>
-            <span className={`font-playfair text-sm ml-2 ${isScrolled ? 'text-secondary' : 'text-white'}`}>
+            <span className={`font-playfair text-base sm:text-xl ml-2 ${isScrolled ? 'text-secondary' : 'text-white'}`}>
               Food Paradise
             </span>
           </a>
           
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10">
             {['about', 'menu', 'gallery', 'location'].map((item) => (
               <a
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className={`capitalize cursor-pointer font-medium transition-colors ${
+                className={`capitalize cursor-pointer font-medium transition-all duration-300 hover:scale-105 ${
                   isScrolled ? 'text-gray-700 hover:text-primary' : 'text-white hover:text-accent'
                 }`}
               >
                 {item}
               </a>
             ))}
-            <a 
-              href="#order" 
-              onClick={() => scrollToSection('order')}
-              className={`btn-primary !py-2 !px-4`}
-            >
-              Order Now
-            </a>
           </nav>
+          
+          {/* Order Now Button */}
+          <a 
+            href="#order" 
+            onClick={() => scrollToSection('order')}
+            className={`hidden md:inline-block btn-primary !py-2 !px-4`}
+          >
+            Order Now
+          </a>
           
           {/* Mobile Navigation Toggle */}
           <button 

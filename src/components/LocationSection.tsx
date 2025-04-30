@@ -1,16 +1,6 @@
 
 import { useEffect, useRef } from 'react';
 
-const operatingHours = [
-  { day: "Monday", hours: "11:00 AM - 10:00 PM" },
-  { day: "Tuesday", hours: "11:00 AM - 10:00 PM" },
-  { day: "Wednesday", hours: "11:00 AM - 10:00 PM" },
-  { day: "Thursday", hours: "11:00 AM - 10:00 PM" },
-  { day: "Friday", hours: "11:00 AM - 11:00 PM" },
-  { day: "Saturday", hours: "10:00 AM - 11:00 PM" },
-  { day: "Sunday", hours: "10:00 AM - 10:00 PM" },
-];
-
 const LocationSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   
@@ -40,14 +30,13 @@ const LocationSection = () => {
         <h2 className="section-heading text-center mb-12 reveal">Find Us</h2>
         
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="reveal">
-            {/* Replace this with your actual Google Maps iframe */}
-            <div className="aspect-video rounded-lg overflow-hidden shadow-custom">
+          <div className="reveal h-full">
+            <div className="aspect-auto h-full rounded-lg overflow-hidden shadow-custom">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.71270615361!2d103.84444812066844!3d1.361621872774889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da17964c19416b%3A0xcf27f8056cac45cd!2sAl-Amin%20Restaurant!5e0!3m2!1sen!2sus!4v1714506476338!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
-                style={{ border: 0 }}
+                style={{ border: 0, minHeight: "350px" }}
                 allowFullScreen={true}
                 loading="lazy"
                 title="Restaurant Location"
@@ -56,12 +45,12 @@ const LocationSection = () => {
           </div>
           
           <div>
-            <div className="bg-white p-6 rounded-lg shadow-custom h-full reveal">
-              <h3 className="font-playfair font-bold text-xl mb-4">Al-Amin Food Paradise</h3>
+            <div className="bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-custom h-full reveal glass-card">
+              <h3 className="font-playfair font-bold text-2xl mb-6 text-primary">Al-Amin Food Paradise</h3>
               
-              <div className="mb-6">
-                <p className="font-medium mb-1">Address:</p>
-                <p className="text-gray-600">
+              <div className="mb-8">
+                <p className="font-medium text-lg mb-3 text-secondary">Address:</p>
+                <p className="text-gray-600 text-lg">
                   123 Yishun Avenue 5<br />
                   #01-23 Northpoint City<br />
                   Singapore 768543
@@ -69,23 +58,21 @@ const LocationSection = () => {
               </div>
               
               <div className="mb-6">
-                <p className="font-medium mb-1">Contact:</p>
-                <p className="text-gray-600">
-                  Phone: +65 9165 5269<br />
-                  Email: info@alaminparadise.com
+                <p className="font-medium text-lg mb-3 text-secondary">Contact:</p>
+                <p className="text-gray-600 text-lg">
+                  Phone: +65 9165 5269
                 </p>
               </div>
               
-              <div>
-                <p className="font-medium mb-3">Operating Hours:</p>
-                <div className="space-y-1">
-                  {operatingHours.map((item, index) => (
-                    <div key={index} className="flex justify-between text-sm">
-                      <span className="font-medium">{item.day}</span>
-                      <span className="text-gray-600">{item.hours}</span>
-                    </div>
-                  ))}
-                </div>
+              <div className="mt-8">
+                <a 
+                  href="https://maps.google.com/?q=Al-Amin Restaurant Singapore"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary inline-block"
+                >
+                  Get Directions
+                </a>
               </div>
             </div>
           </div>

@@ -11,8 +11,8 @@ const heroImages = [
     alt: "Aromatic rice with herbs and spices"
   },
   {
-    url: "https://images.unsplash.com/photo-1596451190630-186aff535bf2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
-    alt: "Grilled meat skewers with vegetables"
+    url: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+    alt: "Freshly prepared naan bread with garlic"
   },
   {
     url: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
@@ -38,11 +38,11 @@ const HeroSection = () => {
         {heroImages.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            className={`absolute inset-0 transition-opacity duration-1500 ease-in-out ${
               currentSlide === index ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40" />
             <img
               src={image.url}
               alt={image.alt}
@@ -54,29 +54,29 @@ const HeroSection = () => {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-playfair text-white mb-4 drop-shadow-lg">
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-playfair text-white mb-6 drop-shadow-lg">
           Al-Amin Food Paradise
         </h1>
-        <p className="text-xl md:text-2xl text-white mb-8 drop-shadow-lg">
+        <p className="text-xl md:text-2xl text-white mb-10 drop-shadow-lg">
           A Taste of Tradition in Every Bite
         </p>
         <a 
           href="#order"
-          className="btn-primary text-lg px-8 py-4"
+          className="btn-primary text-lg px-10 py-4 rounded-full hover:scale-110"
         >
           Order Now
         </a>
       </div>
       
       {/* Carousel Indicators */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-3">
         {heroImages.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-all ${
-              currentSlide === index ? 'bg-accent w-6' : 'bg-white/50'
+              currentSlide === index ? 'bg-accent w-8' : 'bg-white/50'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
