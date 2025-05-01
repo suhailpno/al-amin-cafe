@@ -29,28 +29,28 @@ const galleryImages = [
   },
   {
     id: 6,
-    url: "https://www.foodiesfeed.com/wp-content/uploads/2019/02/indian-street-food-vendor.jpg",
-    alt: "Indian street food vendor preparing delicious snacks",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2021/11/butter-chicken-in-copper-bowl.jpg",
+    alt: "Creamy butter chicken served in traditional copper bowl",
   },
   {
     id: 7,
-    url: "https://www.foodiesfeed.com/wp-content/uploads/2019/01/authentic-indian-biryani.jpg",
-    alt: "Authentic biryani with tender meat and aromatic rice",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2021/11/biryani-rice-with-chicken.jpg",
+    alt: "Authentic biryani with tender chicken and aromatic rice",
   },
   {
     id: 8,
-    url: "https://www.foodiesfeed.com/wp-content/uploads/2023/06/tandoori-chicken-with-garnish.jpg",
-    alt: "Traditional tandoori chicken served with garnish",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2021/11/tandoori-chicken-with-fresh-herbs.jpg",
+    alt: "Traditional tandoori chicken served with fresh herbs",
   },
   {
     id: 9,
-    url: "https://www.foodiesfeed.com/wp-content/uploads/2019/02/masala-dosa-with-chutneys.jpg",
-    alt: "Delicious masala dosa with chutney and sambar",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2021/10/masala-dosa-with-chutneys.jpg",
+    alt: "Delicious masala dosa with coconut chutney and sambar",
   },
   {
     id: 10,
-    url: "https://www.foodiesfeed.com/wp-content/uploads/2019/01/indian-street-food-variety.jpg",
-    alt: "Variety of Indian street food on rustic wooden table",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2021/10/indian-street-food-samosas.jpg",
+    alt: "Crispy samosas with mint chutney - popular Indian street food",
   }
 ];
 
