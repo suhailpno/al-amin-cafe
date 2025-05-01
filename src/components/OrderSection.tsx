@@ -53,7 +53,7 @@ const OrderSection = () => {
         </p>
         
         <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
-          {/* Foodpanda */}
+          {/* Foodpanda with updated image */}
           <div 
             className="reveal animate-float"
             style={{ animationDelay: "0.2s" }}
@@ -68,21 +68,25 @@ const OrderSection = () => {
               className="block relative"
             >
               <div className={`
-                bg-white/90 backdrop-blur-sm rounded-lg p-8 shadow-2xl transition-all duration-500
+                bg-white/90 backdrop-blur-sm rounded-lg p-6 shadow-2xl transition-all duration-500
                 ${isHoverFoodpanda ? 'scale-105 shadow-accent/20' : 'scale-100'}
               `}>
-                <div className="flex items-center justify-center gap-3">
-                  <div className="bg-[#ff2b82] p-3 rounded-lg">
-                    <ShoppingBag className="h-8 w-8 text-white" />
+                <div className="flex flex-col items-center justify-center">
+                  <div className="w-40 h-40 mb-4 overflow-hidden rounded-lg">
+                    <img 
+                      src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Foodpanda_logo_since_2017.jpeg" 
+                      alt="FOODPANDA" 
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <h3 className="text-[#ff2b82] font-bold text-2xl">FOODPANDA</h3>
+                  <p className="text-primary font-medium text-center mt-2">Order via Foodpanda</p>
                 </div>
-                <p className="text-primary font-medium text-center mt-4">Order via Foodpanda</p>
               </div>
             </a>
           </div>
           
-          {/* GrabFood */}
+          {/* GrabFood with updated image */}
           <div 
             className="reveal animate-float"
             style={{ animationDelay: "0.5s" }}
@@ -97,16 +101,20 @@ const OrderSection = () => {
               className="block relative"
             >
               <div className={`
-                bg-white/90 backdrop-blur-sm rounded-lg p-8 shadow-2xl transition-all duration-500
+                bg-white/90 backdrop-blur-sm rounded-lg p-6 shadow-2xl transition-all duration-500
                 ${isHoverGrabfood ? 'scale-105 shadow-accent/20' : 'scale-100'}
               `}>
-                <div className="flex items-center justify-center gap-3">
-                  <div className="bg-[#00b14f] p-3 rounded-lg">
-                    <Utensils className="h-8 w-8 text-white" />
+                <div className="flex flex-col items-center justify-center">
+                  <div className="w-40 h-40 mb-4 overflow-hidden rounded-lg">
+                    <img 
+                      src="https://i.pinimg.com/736x/6e/9b/95/6e9b95d516082899783cfd05d7629995.jpg" 
+                      alt="GRABFOOD" 
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <h3 className="text-[#00b14f] font-bold text-2xl">GRABFOOD</h3>
+                  <p className="text-primary font-medium text-center mt-2">Order via GrabFood</p>
                 </div>
-                <p className="text-primary font-medium text-center mt-4">Order via GrabFood</p>
               </div>
             </a>
           </div>

@@ -39,16 +39,14 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
+          {/* Logo with same font and size */}
           <a href="#" onClick={() => scrollToSection('hero')} className="flex items-center">
-            <span className={`font-playfair text-2xl sm:text-3xl font-bold ${isScrolled ? 'text-primary' : 'text-white'}`}>
-              Al-Amin
-            </span>
-            <span className={`font-playfair text-base sm:text-xl ml-2 ${isScrolled ? 'text-secondary' : 'text-white'}`}>
-              Food Paradise
+            <span className={`font-playfair text-2xl font-bold ${isScrolled ? 'text-primary' : 'text-white'}`}>
+              Al-Amin Food Paradise
             </span>
           </a>
           
-          {/* Desktop Navigation - Centered */}
+          {/* Desktop Navigation - Perfectly Centered */}
           <nav className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10">
             {['about', 'menu', 'gallery', 'location'].map((item) => (
               <a

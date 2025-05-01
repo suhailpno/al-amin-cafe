@@ -11,8 +11,8 @@ const heroImages = [
     alt: "Aromatic rice with herbs and spices"
   },
   {
-    url: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
-    alt: "Freshly prepared naan bread with garlic"
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2023/06/indian-curry-in-copper-bowl.jpg",
+    alt: "Delicious Indian curry in a traditional copper bowl"
   },
   {
     url: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
@@ -53,17 +53,18 @@ const HeroSection = () => {
         ))}
       </div>
       
-      {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-playfair text-white mb-6 drop-shadow-lg">
-          Al-Amin Food Paradise
+      {/* Content with Enhanced Styling and Animations */}
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-playfair text-white mb-6 drop-shadow-lg animate-fade-in">
+          <span className="inline-block text-glow animate-float">Al-Amin Food Paradise</span>
         </h1>
-        <p className="text-xl md:text-2xl text-white mb-10 drop-shadow-lg">
-          A Taste of Tradition in Every Bite
+        <p className="text-xl md:text-2xl text-white mb-10 drop-shadow-lg animate-fade-in" style={{ animationDelay: "0.3s" }}>
+          <span className="inline-block animate-bounce-subtle">A Taste of Tradition in Every Bite</span>
         </p>
         <a 
           href="#order"
-          className="btn-primary text-lg px-10 py-4 rounded-full hover:scale-110"
+          className="btn-primary text-lg px-10 py-4 rounded-full hover:scale-110 animate-fade-in"
+          style={{ animationDelay: "0.6s" }}
         >
           Order Now
         </a>

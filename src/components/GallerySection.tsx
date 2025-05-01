@@ -4,52 +4,52 @@ import { useState, useEffect, useRef } from 'react';
 const galleryImages = [
   {
     id: 1,
-    url: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-    alt: "Rich and aromatic lamb curry",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2023/06/indian-curry-in-copper-bowl.jpg",
+    alt: "Rich and aromatic Indian curry in copper bowl",
   },
   {
     id: 2,
-    url: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    alt: "Freshly prepared naan bread with garlic",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2023/07/naan-bread-dipped-in-sauce.jpg",
+    alt: "Freshly prepared naan bread with curry sauce",
   },
   {
     id: 3,
-    url: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-1.2.1&auto=format&fit=crop&w=896&q=80",
-    alt: "Colorful variety of spices used in our dishes",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2023/07/indian-spices-in-small-bowls.jpg",
+    alt: "Colorful variety of Indian spices in small bowls",
   },
   {
     id: 4,
-    url: "https://images.unsplash.com/photo-1631292784649-4dff096d0c85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-    alt: "Chef preparing a traditional dish in the kitchen",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2023/06/paneer-curry-with-rice.jpg",
+    alt: "Delicious paneer curry with rice",
   },
   {
     id: 5,
-    url: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-    alt: "Fresh salad with seasonal vegetables",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2023/05/indian-feast-on-table.jpg",
+    alt: "Indian feast laid out on a festive table",
   },
   {
     id: 6,
-    url: "https://images.unsplash.com/photo-1568376794508-ae52c6ab3929?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-    alt: "Staff serving customers with a smile",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2019/02/indian-street-food-vendor.jpg",
+    alt: "Indian street food vendor preparing delicious snacks",
   },
   {
     id: 7,
-    url: "https://images.unsplash.com/photo-1589309736404-a037e5ed3c6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2019/01/authentic-indian-biryani.jpg",
     alt: "Authentic biryani with tender meat and aromatic rice",
   },
   {
     id: 8,
-    url: "https://images.unsplash.com/photo-1626777553635-be342a887072?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2023/06/tandoori-chicken-with-garnish.jpg",
     alt: "Traditional tandoori chicken served with garnish",
   },
   {
     id: 9,
-    url: "https://images.unsplash.com/photo-1606471191009-63994c53433b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2019/02/masala-dosa-with-chutneys.jpg",
     alt: "Delicious masala dosa with chutney and sambar",
   },
   {
     id: 10,
-    url: "https://images.unsplash.com/photo-1567188040759-fb8a254b3128?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+    url: "https://www.foodiesfeed.com/wp-content/uploads/2019/01/indian-street-food-variety.jpg",
     alt: "Variety of Indian street food on rustic wooden table",
   }
 ];

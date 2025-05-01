@@ -48,6 +48,22 @@ const Index = () => {
       (el as HTMLElement).style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     });
     
+    // Add smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        if (href) {
+          const targetEl = document.querySelector(href);
+          if (targetEl) {
+            targetEl.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
+    
     return () => {
       revealElements.forEach(element => observer.unobserve(element));
     };

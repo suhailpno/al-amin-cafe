@@ -33,13 +33,14 @@ const LocationSection = () => {
           <div className="reveal h-full">
             <div className="aspect-auto h-full rounded-lg overflow-hidden shadow-custom">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.71270615361!2d103.84444812066844!3d1.361621872774889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da17964c19416b%3A0xcf27f8056cac45cd!2sAl-Amin%20Restaurant!5e0!3m2!1sen!2sus!4v1714506476338!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.788659913726!2d103.78993537578979!3d1.3086857616265717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1a69f9d8c12f%3A0x9b7187f076f8937f!2sAl-Amin%20Food%20Paradise!5e0!3m2!1sen!2ssg!4v1714786868810!5m2!1sen!2ssg"
                 width="100%"
                 height="100%"
-                style={{ border: 0, minHeight: "350px" }}
+                style={{ border: 0, minHeight: "400px" }}
                 allowFullScreen={true}
                 loading="lazy"
-                title="Restaurant Location"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Al-Amin Food Paradise Location"
               ></iframe>
             </div>
           </div>
@@ -51,9 +52,9 @@ const LocationSection = () => {
               <div className="mb-8">
                 <p className="font-medium text-lg mb-3 text-secondary">Address:</p>
                 <p className="text-gray-600 text-lg">
-                  123 Yishun Avenue 5<br />
-                  #01-23 Northpoint City<br />
-                  Singapore 768543
+                  15 Woodlands Loop<br />
+                  #01-59<br />
+                  Singapore 738322
                 </p>
               </div>
               
@@ -66,7 +67,7 @@ const LocationSection = () => {
               
               <div className="mt-8">
                 <a 
-                  href="https://maps.google.com/?q=Al-Amin Restaurant Singapore"
+                  href="https://www.google.com/maps/place/Al-Amin+Food+Paradise/@1.3086811,103.7924029,17z/data=!3m1!4b1!4m6!3m5!1s0x31da1a69f9d8c12f:0x9b7187f076f8937f!8m2!3d1.3086811!4d103.7924029!16s%2Fg%2F11f0w_4f02?entry=ttu&g_ep=EgoyMDI1MDQyNy4xIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary inline-block"
