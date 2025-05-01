@@ -1,56 +1,55 @@
-
 import { useState, useEffect, useRef } from 'react';
 
 const galleryImages = [
   {
     id: 1,
-    url: "https://www.foodiesfeed.com/wp-content/uploads/2023/06/indian-curry-in-copper-bowl.jpg",
-    alt: "Rich and aromatic Indian curry in copper bowl",
+    url: "https://img.freepik.com/free-photo/top-view-indian-food-arrangement_23-2148747645.jpg",
+    alt: "Variety of colorful Indian spices and dishes from top view",
   },
   {
     id: 2,
-    url: "https://www.foodiesfeed.com/wp-content/uploads/2023/07/naan-bread-dipped-in-sauce.jpg",
-    alt: "Freshly prepared naan bread with curry sauce",
+    url: "https://img.freepik.com/free-photo/delicious-indian-food-tray_23-2148723505.jpg",
+    alt: "Delicious Indian food assortment on traditional serving tray",
   },
   {
     id: 3,
-    url: "https://www.foodiesfeed.com/wp-content/uploads/2023/07/indian-spices-in-small-bowls.jpg",
-    alt: "Colorful variety of Indian spices in small bowls",
+    url: "https://img.freepik.com/free-photo/chicken-curry-black-cup-with-rice-side-view_141793-15542.jpg",
+    alt: "Rich and aromatic chicken curry served in elegant black bowl with rice",
   },
   {
     id: 4,
-    url: "https://www.foodiesfeed.com/wp-content/uploads/2023/06/paneer-curry-with-rice.jpg",
-    alt: "Delicious paneer curry with rice",
+    url: "https://img.freepik.com/free-photo/fresh-gourmet-meal-beef-taco-salad-plate-generated-by-ai_188544-13382.jpg",
+    alt: "Gourmet beef biryani served with fresh herbs and yogurt",
   },
   {
     id: 5,
-    url: "https://www.foodiesfeed.com/wp-content/uploads/2023/05/indian-feast-on-table.jpg",
-    alt: "Indian feast laid out on a festive table",
+    url: "https://img.freepik.com/free-photo/delicious-indian-meal-light-surface_1127-13358.jpg",
+    alt: "Complete Indian feast with multiple dishes on traditional serving plates",
   },
   {
     id: 6,
-    url: "https://www.foodiesfeed.com/wp-content/uploads/2021/11/butter-chicken-in-copper-bowl.jpg",
-    alt: "Creamy butter chicken served in traditional copper bowl",
+    url: "https://img.freepik.com/free-photo/indian-butter-chicken-black-bowl-wooden-table_123827-20726.jpg",
+    alt: "Creamy butter chicken served in elegant black bowl on wooden table",
   },
   {
     id: 7,
-    url: "https://www.foodiesfeed.com/wp-content/uploads/2021/11/biryani-rice-with-chicken.jpg",
-    alt: "Authentic biryani with tender chicken and aromatic rice",
+    url: "https://img.freepik.com/free-photo/indian-chicken-biryani-served-terracotta-bowl-with-yogurt-white-background-selective-focus_466689-72588.jpg",
+    alt: "Authentic chicken biryani with saffron rice in traditional terracotta bowl",
   },
   {
     id: 8,
-    url: "https://www.foodiesfeed.com/wp-content/uploads/2021/11/tandoori-chicken-with-fresh-herbs.jpg",
-    alt: "Traditional tandoori chicken served with fresh herbs",
+    url: "https://img.freepik.com/free-photo/side-view-pilaf-with-stewed-beef-meat-plate_141793-5062.jpg",
+    alt: "Traditional lamb biryani with aromatic spices and garnish",
   },
   {
     id: 9,
-    url: "https://www.foodiesfeed.com/wp-content/uploads/2021/10/masala-dosa-with-chutneys.jpg",
-    alt: "Delicious masala dosa with coconut chutney and sambar",
+    url: "https://img.freepik.com/free-photo/top-view-delicious-naan-bread_23-2150857060.jpg",
+    alt: "Freshly baked naan bread with garlic and herbs from top view",
   },
   {
     id: 10,
-    url: "https://www.foodiesfeed.com/wp-content/uploads/2021/10/indian-street-food-samosas.jpg",
-    alt: "Crispy samosas with mint chutney - popular Indian street food",
+    url: "https://img.freepik.com/free-photo/side-view-club-sandwich-with-salted-cucumbers-lemon-olives-round-white-plate_176474-3049.jpg",
+    alt: "Crispy samosas served with mint chutney and tamarind sauce",
   }
 ];
 

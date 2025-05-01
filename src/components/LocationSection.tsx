@@ -52,9 +52,9 @@ const LocationSection = () => {
               <div className="mb-8">
                 <p className="font-medium text-lg mb-3 text-secondary">Address:</p>
                 <p className="text-gray-600 text-lg">
-                  15 Woodlands Loop<br />
-                  #01-59<br />
-                  Singapore 738322
+                  47 Holland Dr<br />
+                  #01-377<br />
+                  Singapore 270047
                 </p>
               </div>
               

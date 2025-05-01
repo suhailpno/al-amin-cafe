@@ -1,6 +1,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { ShoppingBag, Utensils } from 'lucide-react';
+import GlowEffect from './GlowEffect';
 
 const OrderSection = () => {
   const [isHoverFoodpanda, setIsHoverFoodpanda] = useState(false);
@@ -53,7 +54,7 @@ const OrderSection = () => {
         </p>
         
         <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
-          {/* Foodpanda with updated image */}
+          {/* Foodpanda with updated image and glow effect */}
           <div 
             className="reveal animate-float"
             style={{ animationDelay: "0.2s" }}
@@ -67,11 +68,10 @@ const OrderSection = () => {
               onClick={() => trackOrderClick('foodpanda')}
               className="block relative"
             >
-              <div className={`
-                bg-white/90 backdrop-blur-sm rounded-lg p-6 shadow-2xl transition-all duration-500
-                ${isHoverFoodpanda ? 'scale-105 shadow-accent/20' : 'scale-100'}
-              `}>
-                <div className="flex flex-col items-center justify-center">
+              <GlowEffect className={isHoverFoodpanda ? "scale-105" : "scale-100"}>
+                <div className={`
+                  transition-all duration-500 flex flex-col items-center justify-center
+                `}>
                   <div className="w-40 h-40 mb-4 overflow-hidden rounded-lg">
                     <img 
                       src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Foodpanda_logo_since_2017.jpeg" 
@@ -82,11 +82,11 @@ const OrderSection = () => {
                   <h3 className="text-[#ff2b82] font-bold text-2xl">FOODPANDA</h3>
                   <p className="text-primary font-medium text-center mt-2">Order via Foodpanda</p>
                 </div>
-              </div>
+              </GlowEffect>
             </a>
           </div>
           
-          {/* GrabFood with updated image */}
+          {/* GrabFood with updated image and glow effect */}
           <div 
             className="reveal animate-float"
             style={{ animationDelay: "0.5s" }}
@@ -100,11 +100,10 @@ const OrderSection = () => {
               onClick={() => trackOrderClick('grabfood')}
               className="block relative"
             >
-              <div className={`
-                bg-white/90 backdrop-blur-sm rounded-lg p-6 shadow-2xl transition-all duration-500
-                ${isHoverGrabfood ? 'scale-105 shadow-accent/20' : 'scale-100'}
-              `}>
-                <div className="flex flex-col items-center justify-center">
+              <GlowEffect className={isHoverGrabfood ? "scale-105" : "scale-100"}>
+                <div className={`
+                  transition-all duration-500 flex flex-col items-center justify-center
+                `}>
                   <div className="w-40 h-40 mb-4 overflow-hidden rounded-lg">
                     <img 
                       src="https://i.pinimg.com/736x/6e/9b/95/6e9b95d516082899783cfd05d7629995.jpg" 
@@ -115,7 +114,7 @@ const OrderSection = () => {
                   <h3 className="text-[#00b14f] font-bold text-2xl">GRABFOOD</h3>
                   <p className="text-primary font-medium text-center mt-2">Order via GrabFood</p>
                 </div>
-              </div>
+              </GlowEffect>
             </a>
           </div>
         </div>
