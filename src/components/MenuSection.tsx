@@ -8,102 +8,103 @@ interface MenuItem {
   image: string;
 }
 
+// Updated menu items based on Al-Amin's Food Panda menu
 const menuItems: MenuItem[] = [
   {
     id: 1,
-    name: "Chicken Biryani",
-    description: "Fragrant basmati rice cooked with tender chicken pieces and aromatic spices",
-    image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    name: "Chicken Briyani",
+    description: "Fragrant basmati rice cooked with marinated chicken and aromatic spices",
+    image: "https://img.freepik.com/free-photo/indian-chicken-biryani-served-terracotta-bowl-with-yogurt-white-background-selective-focus_466689-72554.jpg"
   },
   {
     id: 2,
-    name: "Lamb Curry",
-    description: "Tender pieces of lamb simmered in a rich, spiced curry sauce",
-    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    name: "Mutton Briyani",
+    description: "Traditional rice dish with tender mutton pieces and signature spice blend",
+    image: "https://img.freepik.com/free-photo/mutton-gosht-biryani-with-basmati-rice-garnished-with-fried-onion-mint-leaves_466689-74145.jpg"
   },
   {
     id: 3,
-    name: "Garlic Naan",
-    description: "Freshly baked flatbread topped with garlic and butter",
-    image: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    name: "Fish Briyani",
+    description: "Flavorful rice cooked with marinated fish and traditional herbs",
+    image: "https://img.freepik.com/free-photo/seafood-biryani-bowl-food-photography_53876-91341.jpg"
   },
   {
     id: 4,
-    name: "Vegetable Samosa",
-    description: "Crispy pastry filled with spiced potatoes and peas",
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    name: "Vegetable Briyani",
+    description: "Aromatic rice with seasonal vegetables and special spice blend",
+    image: "https://img.freepik.com/premium-photo/top-view-traditional-vegetable-biryani-with-raita_466689-29633.jpg"
   },
   {
     id: 5,
-    name: "Butter Chicken",
-    description: "Grilled chicken in a rich, creamy tomato sauce",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    name: "Tandoori Chicken",
+    description: "Chicken marinated in yogurt and spices, cooked in a tandoor",
+    image: "https://img.freepik.com/free-photo/traditional-indian-tandoori-chicken_1147-192.jpg"
   },
   {
     id: 6,
-    name: "Vegetable Biryani",
-    description: "Fragrant rice cooked with seasonal vegetables and spices",
-    image: "https://images.unsplash.com/photo-1593179241807-10580fb770e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    name: "Butter Chicken",
+    description: "Tender chicken pieces in a rich tomato, butter and cream sauce",
+    image: "https://img.freepik.com/free-photo/chicken-makhani-butter-chicken-curry-indian-food-white-background_55610-3749.jpg"
   },
   {
     id: 7,
-    name: "Tandoori Chicken",
-    description: "Chicken marinated in yogurt and spices, cooked in a tandoor",
-    image: "https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    name: "Palak Paneer",
+    description: "Cottage cheese cubes in a creamy spinach gravy",
+    image: "https://img.freepik.com/premium-photo/palak-paneer-indian-dish-with-spinach-cheese-white-background-isolated_987802-173.jpg"
   },
   {
     id: 8,
-    name: "Mango Lassi",
-    description: "Refreshing yogurt drink with mango and cardamom",
-    image: "https://images.unsplash.com/photo-1527661591475-527312dd65f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    name: "Garlic Naan",
+    description: "Soft flatbread topped with garlic and butter, baked in tandoor",
+    image: "https://img.freepik.com/free-photo/indian-naan-bread_1147-155.jpg"
   },
   {
     id: 9,
-    name: "Palak Paneer",
-    description: "Cottage cheese cubes in a creamy spinach sauce",
-    image: "https://images.unsplash.com/photo-1618360925897-365e298a6e65?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    name: "Chicken Tikka",
+    description: "Boneless chicken pieces marinated and grilled to perfection",
+    image: "https://img.freepik.com/free-photo/chicken-tikka-kebab-white-plate-with-sauce-generated-by-ai_188544-13265.jpg"
   },
   {
     id: 10,
-    name: "Masala Dosa",
-    description: "Crispy rice crepe filled with spiced potato filling",
-    image: "https://images.unsplash.com/photo-1589352753375-e42d3dddf3e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    name: "Mango Lassi",
+    description: "Refreshing yogurt drink with sweet mango pulp",
+    image: "https://img.freepik.com/free-photo/mango-lassi-mango-smoothie-white-background_123827-22643.jpg"
   },
   {
     id: 11,
-    name: "Gulab Jamun",
-    description: "Sweet milk solids balls soaked in rose flavored syrup",
-    image: "https://images.unsplash.com/photo-1589197331516-4d84b75b7af3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    name: "Plain Teh",
+    description: "Freshly brewed tea served hot",
+    image: "https://img.freepik.com/free-photo/cup-tea-with-vintage-kettle_144627-27155.jpg"
   },
   {
     id: 12,
-    name: "Chicken Tikka",
-    description: "Boneless chicken pieces marinated and grilled to perfection",
-    image: "https://images.unsplash.com/photo-1606943932434-2f21e1c54ef2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    name: "Teh Tarik",
+    description: "Pulled milk tea, a popular Malaysian drink",
+    image: "https://img.freepik.com/free-photo/teh-tarik-popular-malaysian-drink-black-background_505751-2741.jpg"
   },
   {
     id: 13,
-    name: "Prawn Curry",
-    description: "Succulent prawns in a flavorful coconut curry sauce",
-    image: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    name: "Egg Prata",
+    description: "Flaky flatbread with egg, served with curry",
+    image: "https://img.freepik.com/premium-photo/asian-roti-prata-with-curry-sauce_1339-156426.jpg"
   },
   {
     id: 14,
-    name: "Vegetable Korma",
-    description: "Mixed vegetables in a rich, creamy cashew and yogurt sauce",
-    image: "https://images.unsplash.com/photo-1631292784640-2b24be979735?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    name: "Plain Prata",
+    description: "Traditional flaky flatbread served with curry",
+    image: "https://img.freepik.com/premium-photo/chapati-also-known-as-indian-flat-bread-roti-fulka-with-green-salad-generative-ai_92742-2951.jpg"
   },
   {
     id: 15,
-    name: "Jeera Rice",
-    description: "Basmati rice flavored with cumin seeds",
-    image: "https://images.unsplash.com/photo-1596450514735-111cca0a1151?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    name: "Roti John",
+    description: "Singapore-style omelette sandwich with minced meat",
+    image: "https://img.freepik.com/free-photo/sandwich-with-chicken-tomato-lettuce-cheese-french-fries_2829-19986.jpg"
   },
   {
     id: 16,
-    name: "Raita",
-    description: "Yogurt mixed with cucumber and mild spices",
-    image: "https://images.unsplash.com/photo-1589516987731-a382cabde0f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    name: "Murtabak Special",
+    description: "Stuffed folded prata with meat, eggs and onions",
+    image: "https://img.freepik.com/premium-photo/popular-asian-food-murtabak-mutabbaq-filled-with-eggs-onion-beef-flour-flat-lay_492154-1926.jpg"
   }
 ];
 
@@ -139,8 +140,8 @@ const MenuSection = () => {
         </h2>
         
         <p className="text-center max-w-2xl mx-auto mb-12 reveal">
-          Experience the rich flavors of traditional cuisine with our carefully crafted dishes, 
-          made with authentic spices and fresh ingredients.
+          Experience the rich flavors of authentic Indian and Singaporean cuisine with our carefully crafted dishes, 
+          made with traditional spices and fresh ingredients.
         </p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">

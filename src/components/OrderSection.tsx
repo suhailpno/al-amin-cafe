@@ -1,6 +1,5 @@
 
 import { useState, useEffect, useRef } from 'react';
-import { ShoppingBag, Utensils } from 'lucide-react';
 import GlowEffect from './GlowEffect';
 
 const OrderSection = () => {
@@ -29,7 +28,6 @@ const OrderSection = () => {
   }, []);
 
   const trackOrderClick = (platform: string) => {
-    // For real implementation, replace with actual analytics tracking
     console.log(`Order clicked: ${platform}`);
   };
 
@@ -54,7 +52,7 @@ const OrderSection = () => {
         </p>
         
         <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
-          {/* Foodpanda with updated image and glow effect */}
+          {/* Foodpanda with updated link */}
           <div 
             className="reveal animate-float"
             style={{ animationDelay: "0.2s" }}
@@ -62,7 +60,7 @@ const OrderSection = () => {
             onMouseLeave={() => setIsHoverFoodpanda(false)}
           >
             <a 
-              href="https://www.foodpanda.sg" 
+              href="https://www.foodpanda.sg/restaurant/v6tq/al-amin-food-paradise-holland-village?srsltid=AfmBOooQYO2RnfIXPhV_keZoZgeZnlRI5io5oT9lUl-WS-nCh6YbR-SV" 
               target="_blank" 
               rel="noopener noreferrer"
               onClick={() => trackOrderClick('foodpanda')}
@@ -79,14 +77,12 @@ const OrderSection = () => {
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <h3 className="text-[#ff2b82] font-bold text-2xl">FOODPANDA</h3>
-                  <p className="text-primary font-medium text-center mt-2">Order via Foodpanda</p>
                 </div>
               </GlowEffect>
             </a>
           </div>
           
-          {/* GrabFood with updated image and glow effect */}
+          {/* GrabFood with updated link */}
           <div 
             className="reveal animate-float"
             style={{ animationDelay: "0.5s" }}
@@ -94,7 +90,7 @@ const OrderSection = () => {
             onMouseLeave={() => setIsHoverGrabfood(false)}
           >
             <a 
-              href="https://food.grab.com" 
+              href="https://food.grab.com/sg/en/restaurant/al-amin-food-paradise-holland-drive-delivery/SGDD06828?" 
               target="_blank" 
               rel="noopener noreferrer"
               onClick={() => trackOrderClick('grabfood')}
@@ -111,8 +107,6 @@ const OrderSection = () => {
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <h3 className="text-[#00b14f] font-bold text-2xl">GRABFOOD</h3>
-                  <p className="text-primary font-medium text-center mt-2">Order via GrabFood</p>
                 </div>
               </GlowEffect>
             </a>
